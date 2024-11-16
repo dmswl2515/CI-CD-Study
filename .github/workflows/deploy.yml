@@ -30,5 +30,6 @@ jobs:
             sudo fuser -k -n tcp 8080 || true
             nohup java -jar build/libs/*SNAPSHOT.jar > ./output.log 2>&1 & 
             
+
             
 
