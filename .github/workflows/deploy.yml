@@ -5,8 +5,6 @@ on :
   push : 
     branches :
       - main
-    paths:
-      - 'src/main/java/**/AppController.java'  # 'AppController.java' 파일이 변경되었을 때만 실행  
 
 jobs:
   Deploy:
@@ -31,4 +29,4 @@ jobs:
             ./gradlew clean build
             sudo fuser -k -n tcp 8080 || true
             nohup java -jar build/libs/*SNAPSHOT.jar > ./output.log 2>&1 & 
-            
+
